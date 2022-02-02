@@ -1,0 +1,14 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <div class="container">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-8" id="header-text">
+                  <h1 id="header-h1"><b>Welcome to RJ World !!</b>></h1><br>
+                  <h2 id="header-h2">If You Can't Stop Thinking About It.. <br> Buy It. </h2>
+                  <p id="header-paragraph">Demand quality, not just in the products you buy,<br> but in the life of the person who made it...</p>
+                  <a href="{% url 'register' %}" class="btn" style="color:black; background-color: #fd5e14;"type="submit" id="body-link-row">Discover More</a>
+                </div>
+    </div>
+{% endblock content %}

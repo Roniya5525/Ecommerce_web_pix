@@ -3,6 +3,9 @@ from .models import Customer,Product,Order,OrderItem,ShippingAddress
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'store/home.html')
+
 def store(request):
     products = Product.objects.all()
     context = {'products':products}
