@@ -1,0 +1,21 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+   
+<div class="container">
+    <div class="row g-0">
+        <div class="col-sm-6 col-md-8" id="header-text">
+            <img src="{{products.image.url}}" alt="" class="detail-img"><br><br>
+            <h2 style="color: black;"><b>{{products.name}}</b></h2>
+            <h3>₹{{products.price}}</h3>
+            <h5>{{products.details}}</h5>
+        </div>
+        <div class="col-sm-6 col-md-8" id="header-text">
+            <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+            <a class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; Continue Shopping</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

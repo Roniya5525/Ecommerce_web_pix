@@ -6,9 +6,9 @@ from django import forms
 
 class UserRegisterForm(UserCreationForm):
 	email = forms.EmailField()
-	firstname = forms.CharField(max_length=50)
-	lastname = forms.CharField(max_length=50)
+	first_name = forms.CharField(max_length=50)
+	last_name = forms.CharField(max_length=50)
 
 	class Meta:
 		model = User
-		fields = ['username','firstname','lastname', 'email', 'password1', 'password2']
+		fields = ['username','first_name','last_name', 'email', 'password1', 'password2']
